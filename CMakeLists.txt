@@ -13,7 +13,7 @@ find_package(glew CONFIG)
 find_package(fmt CONFIG)
 find_package(glm CONFIG)
 
-add_executable( opengl-imgui-sample
+add_executable( mandelbrot_run,
                 main.cpp
                 opengl_shader.cpp
                 opengl_shader.h
