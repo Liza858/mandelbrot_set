@@ -19,5 +19,6 @@
 
 ## Examples
 
-![1][2.png]
-![2][2.png]
+![1](./examples/1.png)
+
+![2](./examples/2.png)
