@@ -235,7 +235,6 @@ int main(int, char **)
       triangles_shader.set_uniform("screen_h", display_h);
 
 
-
       triangles_shader.use();
       glActiveTexture(GL_TEXTURE0);
       glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);

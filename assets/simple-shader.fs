@@ -30,7 +30,6 @@ void main()
     float area_w = area_x.y - area_x.x;
     float area_h = area_y.y - area_y.x;
 
-
     float fractal_half_height = fractal_half_width / area_w * area_h;
 
     fractal_half_height = fractal_half_height * screen_w / screen_h;
@@ -39,17 +38,13 @@ void main()
     float h_scale = area_h / (area_h * fractal_half_height);
 
     vec2 bottom_left = vec2(fractal_center.x - fractal_half_width, fractal_center.y - fractal_half_height);
-    vec2 bottom_right = vec2(fractal_center.x + fractal_half_width, fractal_center.y - fractal_half_height);
-    vec2 top_left = vec2(fractal_center.x - fractal_half_width, fractal_center.y + fractal_half_height);
-    vec2 top_right = vec2(fractal_center.x + fractal_half_width, fractal_center.y + fractal_half_height);
-   
+
    
     float x = v_out.pos.x - bottom_left.x + area_x.x;
     float y = v_out.pos.y - bottom_left.y + area_y.x;
 
+    vec2 c = vec2(area_x.x + (x - area_x.x) * w_scale, area_y + (y - area_y.x) * h_scale);
     vec2 z = vec2(0.0, 0.0);
-
-    vec2 c = vec2(area_x.x + (x - area_x.x) * w_scale, area_y + (y - area_y.x)*h_scale);
 
     int iter = 0;
 
